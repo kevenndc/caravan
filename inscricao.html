@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" >
     
     <title>Caravan - Inscrição</title>
@@ -86,7 +86,6 @@
             <h2 class="display-4 text-primary">INSCREVA-SE</h2>
         </div>
         <div class="row">
-            <div class="col-lg mb-5">
             <form action="" class="col-lg-6">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -151,7 +150,76 @@
                         <input type="text" class="form-control" id="inputCep" placeholder="xxxxx-xxx">
                     </div>
                 </div>
+                <div class="bg-light rounded box-shadow p-3 form-group">
+                    <h2 class="h6 text-primary">FORMA DE PAGAMENTO</h2>
+                    <nav class="nav btn-group mb-3" id="formaPagamento" role="tablist">
+                        <button type="button" class="btn btn-secondary btn-sm active" id="nav-cartao-tab" data-toggle="tab" href="#nav-cartao" role="tab" aria-controls="nav-cartao" aria-selected="true">Cartão de Crédito</button>
+                        <button type="button" class="btn btn-secondary btn-sm" id="nav-boleto-tab" data-toggle="tab" href="#nav-boleto" role="tab" aria-controls="nav-boleto" aria-selected="false">Boleto Bancário</button>
+                    </nav>
+                    <div class="tab-content" id="formaPagamentoConteudo">
+                        <div class="tab-pane fade show active" id="nav-cartao" role="tabpanel" aria-labelledby="nav-cartao-tab">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputNomeTitular">Nome do Titular</label>
+                                    <input type="text" class="form-control" id="inputNomeTitular" placeholder="Nome impresso no cartão">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputMesVencimento">Mês</label>
+                                    <input type="text" class="form-control" id="inputMesVencimento" placeholder="Mês de vencimento">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputAnoVencimento">Ano</label>
+                                    <input type="text" class="form-control" id="inputAnoVencimento" placeholder="Ano de vencimento">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputNumeroCartao">Número do Cartão</label>
+                                    <input type="text" class="form-control" id="inputNumeroCartao" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputCodigoSeguranca">Código de Segurança</label>
+                                    <input type="text" class="form-control" id="inputCodigoSeguranca" placeholder="XXX">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-boleto" role="tabpanel" aria-labelledby="nav-boleto-tab">
+                            <p class="lead">Clique em contratar plano que enviaremos um boleto para o seu e-mail.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">Termos e Condições</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg mt-0">Contratar Plano</button>
             </form>
+            <div class="col-lg-5 mx-auto order-first order-lg-1 mb-4">
+                <h2 class="h6 text-primary">PLANO ESCOLHIDO</h2>
+                <div class="bg-light rounded p-4 box-shadow">
+                    <h2>Gold</h2>
+                    <ul class="list-unstyled lista-plano">
+                        <li>→ 30 dias de viagem</li>
+                        <li>→ 3 destinos diferentes</li>
+                        <li>→ Tudo pago pela empresa</li>
+                        <li>→ Ingressos para festas</li>
+                    </ul>
+                    <form>
+                        <div class="form-group">
+                            <select class="custom-select" id="inputCidades">
+                                <option selected>Selecione a cidade</option>
+                                <option value="1">California</option>
+                                <option value="2">Paris</option>
+                                <option value="3">Dublin</option>
+                            </select>
+                        </div>
+                    </form>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <span class="h4">R$5.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
